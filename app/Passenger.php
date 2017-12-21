@@ -12,6 +12,7 @@ class Passenger extends Model
 
         'name', 'number_identification', 'birtdate', 'phone'
     ];
+    //hola Mundo
 
     public function passengerCountry()
     {
