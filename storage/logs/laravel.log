@@ -1,3 +1,6 @@
 [2017-12-20 19:39:26] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to a member function passengerCountry() on null' in /opt/lampp/htdocs/viajes/vendor/psy/psysh/src/Psy/ExecutionLoop/Loop.php(90) : eval()'d code:1
 Stack trace:
 #0 {main}  
+[2017-12-21 20:32:02] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '}'' in /opt/lampp/htdocs/viajes/app/Pay.php:19
+Stack trace:
+#0 {main}  

@@ -12,7 +12,7 @@ class Passenger extends Model
 
         'name', 'number_identification', 'birtdate', 'phone'
     ];
-  
+
 
     public function passengerCountry()
     {

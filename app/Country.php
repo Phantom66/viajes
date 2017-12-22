@@ -18,6 +18,7 @@ class Country extends Model
     public function countryPassenger()
     {
         return $this->hasMany('App\Passenger');
+
     }
 
     public function countryAirport(){
