@@ -10,14 +10,14 @@ class Country extends Model
 
     protected $fillable = [
 
-      'name'
+      'name_countries'
 
     ];
 
 
     public function countryPassenger()
     {
-        return $this->hasMany('App\Passenger');
+        return $this->hasMany('App\Passenger', 'id', 'country_id');
 
     }
 

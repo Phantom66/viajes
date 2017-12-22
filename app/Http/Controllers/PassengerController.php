@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Passenger;
+use App\Country;
 use Illuminate\Http\Request;
+
 
 class PassengerController extends Controller
 {
@@ -15,6 +17,21 @@ class PassengerController extends Controller
     public function index()
     {
         //
+        //Con Eloquent
+        $passenger = Passenger::all();
+
+
+        //Con fluent
+        //$passenger = \DB::table('passengers')->get();
+
+      /*  $passenger = \DB::table('countries')
+        ->join('passengers', 'countries.id', '=','passengers.country_id')
+        ->select('passengers.id','name', 'number_identification', 'name_countries')
+        ->get();
+        */
+        return view('passenger.index', compact('passenger'));
+
+        //return dd($passenger);
     }
 
     /**

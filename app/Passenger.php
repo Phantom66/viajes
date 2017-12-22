@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
+
 class Passenger extends Model
 {
     //
@@ -16,7 +17,7 @@ class Passenger extends Model
 
     public function passengerCountry()
     {
-        return $this->belongsTo('App\Country');
+        return $this->belongsTo('App\Country', 'country_id','id');
     }
 
     public function passengerPay(){
