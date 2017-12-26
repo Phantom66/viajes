@@ -17,13 +17,13 @@ class Country extends Model
 
     public function countryPassenger()
     {
-        return $this->hasMany('App\Passenger', 'id', 'country_id');
+        return $this->hasMany('App\Passenger', 'id', 'passenger_id');
 
     }
 
     public function countryAirport(){
 
-      return $this->hasMany('App\Airport');
+      return $this->hasMany('App\Airport', 'id', 'country_id');
 
     }
 }

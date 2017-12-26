@@ -16,7 +16,7 @@ class Airport extends Model
 
     public function airportCountry(){
 
-      return $this->belongstTo('App\Country');
+      return $this->belongstTo('App\Country', 'country_id', 'id');
     }
 
     public function airportFlight(){

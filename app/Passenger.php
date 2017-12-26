@@ -20,9 +20,10 @@ class Passenger extends Model
         return $this->belongsTo('App\Country', 'country_id','id');
     }
 
+    //El orden de los parámetros es importante
     public function passengerPay(){
 
-      return $this->hasMany('App\Pay');
+      return $this->hasMany('App\Pay', 'passenger_id', 'id');
 
     }
 }

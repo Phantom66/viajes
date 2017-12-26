@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Passenger;
+
 use Illuminate\Http\Request;
 
 

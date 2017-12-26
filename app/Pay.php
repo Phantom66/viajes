@@ -10,18 +10,19 @@ class Pay extends Model
 
     protected $fillable = [
 
-      'date_pay', 'total'
+        'date_pay','total'
     ];
 
     public function payPassenger(){
 
-      return $this->belongsTo('App/Passenger')
+      return $this->belongsTo('App/Passenger', 'passenger_id', 'id');
     }
 
     public function payReservatiion(){
 
-      return $this->belongsTo('App/Reservation')
+      return $this->belongsTo('App/Reservation');
     }
+    //
 
 
 }

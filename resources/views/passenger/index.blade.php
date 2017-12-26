@@ -21,6 +21,9 @@
         <th>
           Pais Destino
         </th>
+        <th>
+          Pago
+        </th>
       </tr>
 
       @foreach ($passenger as $newPassenger)
@@ -37,13 +40,22 @@
           <td>
             {{ $newPassenger->passengerCountry->name_countries}}
           </td>
+          <td>
+            {{--
+                Debido que la relación del modelo es de uno a muchos, me trae
+                los datos en un array bidimensional, en este caso de que un
+                usuario solo ha realizado un pago, en el caso de que un usuario
+                realice varios pago debo presentarlo para que la me muestre los
+                diferentes pago dentro del mismo array
+            --}}
+              {{ $newPassenger->passengerPay[0]->total }}
+
+
+          </td>
         </tr>
 
-
-
-
-
       @endforeach
+
 
       </table>
   </body>
