@@ -48,7 +48,13 @@
                 realice varios pago debo presentarlo para que la me muestre los
                 diferentes pago dentro del mismo array
             --}}
-              {{ $newPassenger->passengerPay[0]->total }}
+
+              @foreach ($newPassenger->passengerPay as $pago )
+
+                {{ $pago->total }}
+
+              @endforeach
+
 
 
           </td>
