@@ -9,14 +9,18 @@ class Airplane extends Model
     //
     protected $filliable = [
 
-    'maker', 'type', 'capacity',
+    'maker', 'type', 'capacity'
 
   ];
 
   public function airplaneFlight(){
 
-    return $this->hasMany('App\Flight');
+    return $this->belongsTo('App\Flight', 'flight_id', 'id');
 
+  }
+  public funtcion airplaneAirline(){
+
+    return $this->belongsTo('App\Airline', 'airline_id', 'id')
   }
 
 }

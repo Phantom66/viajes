@@ -16,7 +16,7 @@ class Tariff extends Model
 
     public function tariffFlight(){
 
-      return $this->hasMany('App\Flight');
+      return $this->hasMany('App\Flight', 'id', 'tariff_id');
 
     }
 }

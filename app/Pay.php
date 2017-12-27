@@ -20,7 +20,7 @@ class Pay extends Model
 
     public function payReservatiion(){
 
-      return $this->belongsTo('App/Reservation');
+      return $this->hasMany('App/Reservation', 'reservation_id', 'id');
     }
     //
 

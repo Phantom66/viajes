@@ -16,7 +16,13 @@ class Reservation extends Model
 
     public function reservationFlight(){
 
-      return $this->hasMany('App/Flight');
+      return $this->hasMany('App/Flight', 'flight_id', 'id');
+
+    }
+
+    public function reservationPay(){
+
+      return $this->belongsTo('App\Pay', 'pay_id', 'id' );
 
     }
 

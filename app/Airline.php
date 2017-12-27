@@ -18,7 +18,7 @@ class Airline extends Model
 
     public function airlineAirplane(){
 
-      return $this->hasMany('App\Airplane');
+      return $this->hasMany('App\Airplane', 'airplane', 'id');
     }
 
 
