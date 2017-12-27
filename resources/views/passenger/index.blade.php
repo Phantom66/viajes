@@ -51,8 +51,8 @@
 
               @foreach ($newPassenger->passengerPay as $pago )
 
-                {{ $pago->total }}
-
+                <strong>Abono:
+                  </strong>{{ $pago->total }}
               @endforeach
 
 
